@@ -1,1 +1,166 @@
-%p Hello World!
+.container
+  = render partial: "shared/header"
+  .featured-projects
+    .featured-projects__details
+      .projects-cover
+        %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/950131/original/fc4f18f5-6c57-4492-bd0c-69d0741224a2.png?1481866299"}
+      .job-type
+        %p ディレクター
+      .projects-title
+        %h2 WEBアプリ設計大好き？面白プロジェクト大量:WEBディレクター募集
+      .company-name
+        %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=62,dh=62,da=s,ds=s,cw=62,ch=62,cc=FFFFFF)/assets/images/719239/original/27be12e9-1b9f-4a2c-8a73-e76f4e2dc193.gif?1478064956"}
+        %p 株式会社宅都ホールディングス
+    .featured-projects__details
+      .projects-cover
+        %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/1152441/original/36f28baa-74b7-4605-ba3e-a3c9d81ee725.jpeg?1485416145"}
+      .job-type
+        %p ライター
+      .projects-title
+        %h2 売れるLPを作り、世の中に価値を届ける！セールスコピーライターWANTED
+      .company-name
+        %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=62,dh=62,da=s,ds=s,cw=62,ch=62,cc=FFFFFF)/assets/images/1072717/original/3d7c92ba-feff-44a3-aa45-873d4db0fc5e.png?1484148772"}
+        %p 株式会社INK
+    .featured-projects__details
+      .projects-cover
+        %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/243437/original/6b2426ae-de6f-4864-9a1d-cc7b8cad3d71.png?1487118673"}
+      .job-type
+        %p セールス
+      .projects-title
+        %h2 VR新時代を共に切り開こう！Google認定代理店で企画営業メンバー募集！
+      .company-name
+        %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=62,dh=62,da=s,ds=s,cw=62,ch=62,cc=FFFFFF)/assets/images/332837/original/ea93a9de-70c9-4657-83b2-cab9020e5557.png?1485926922"}
+        %p LIFE STYLE株式会社
+  .body
+    .column-main
+      .projects-index-menu
+        %p.projects-count
+          %span.current 2
+          %span.per /
+          %span.total 2
+        %ul.projects-index-sort-menu
+          %li.sort-menu
+            %p 人気
+          %li.sort-menu
+            %p 新着
+          %li.sort-menu
+            %h4 並び替え
+      .projects-index-list
+        .project-index-single
+          .project-image
+            %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/424668/original/91cc1fef-99eb-424c-ae2a-398a335ecc5b.png?1480500682"}
+          .project-detail
+            .project-label
+              %span 新卒採用（メルカリは通年採用）
+            %h1.project-title
+              %span 《17/18/19新卒》メルカリにはどこよりも成長できる環境があります
+            .project-bottom
+              %table{role: "presentation"}
+                %tbody
+                  %tr
+                    %td.company-thumbnail
+                      %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/35323/original/bd46320d-a4c6-4bdc-bc52-e4b2993873b5.png?1410166354"}
+                    %td.company-name
+                      %h3 株式会社メルカリ
+                      %span 東京都
+        .project-index-single
+          .project-image
+            %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/994078/original/44cd9a09-d023-4e77-b1eb-9c81f0b577a4.jpeg?1482736247"}
+          .project-detail
+            .project-label
+              %span Webエンジニア
+            %h1.project-title
+              %span 男女差が最も少ないと言われるエンジニア職、今なら未経験でも教育します！
+            .project-bottom
+              %table{role: "presentation"}
+                %tbody
+                  %tr
+                    %td.company-thumbnail
+                      %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/543744/original/698edbe5-db67-4c0e-8fa0-447b6b87153c.jpeg?1472709375"}
+                    %td.company-name
+                      %h3 株式会社イデアルアーキテクツ
+                      %span 東京都
+    .column-side
+      .project-index-filter-header.result
+        %h4 結果
+      .project-total-count
+        %p 2
+      .project-index-filter-header
+        %h4 フィルター
+      .project-index-filter-category
+        .project-index-filter-category-title
+          %h5 職種
+          %ul
+            %li.category.job-type__main
+              %p エンジニア
+            %li.category.job-type__sub
+              %p Webエンジニア
+            %li.category.job-type__sub
+              %p モバイルエンジニア
+            %li.category.job-type__sub
+              %p インフラエンジニア
+            %li.category.job-type__sub
+              %p その他エンジニア
+            %li.category.job-type__main
+              %p デザイナー
+            %li.category.job-type__sub
+              %p UI/UXデザイナー
+            %li.category.job-type__sub
+              %p グラフィックデザイナー
+            %li.category.job-type__sub
+              %p その他デザイナー
+            %li.category.job-type
+              %p ディレクター
+            %li.category.job-type
+              %p コーポレート・スタッフ
+            %li.category.job-type
+              %p セールス
+            %li.category.job-type
+              %p マーケティング
+            %li.category.job-type
+              %p ライター
+            %li.category.job-type
+              %p その他
+      .project-index-filter-category
+        .project-index-filter-category-title
+          %h5 採用形態
+          %ul
+            %li.category
+              %p 新卒採用
+            %li.category
+              %p インターン・学生バイト
+            %li.category
+              %p 中途採用
+            %li.category
+              %p 社会人バイト・契約・委託
+      .project-index-filter-category
+        .project-index-filter-category-title
+          %h5 地域
+          %ul
+            %li.category
+              %p 東京
+            %li.category
+              %p 大阪
+            %li.category
+              %p 名古屋
+            %li.category
+              %p 京都
+            %li.category
+              %p 福岡
+            %li.category
+              %p 札幌
+            %li.category
+              %p 北海道・東北
+            %li.category
+              %p 関東
+            %li.category
+              %p 北陸・甲信越
+            %li.category
+              %p 東海
+            %li.category
+              %p 近畿
+            %li.category
+              %p 中国・四国
+            %li.category
+              %p 九州・沖縄
+  = render partial: "shared/footer"
