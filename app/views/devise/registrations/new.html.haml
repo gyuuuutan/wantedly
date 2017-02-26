@@ -1,21 +1,52 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.container
+  .header
+    %p.header-logo
+      = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), products_path
+  .registrations-body
+    .main-body
+      %h1.title 30秒でアカウント登録（無料です）
+      .company-form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .company-form__field
+            .company-form__field--left
+              = f.label :name, "会社名", class: "form-label"
+            .company-form__field--right
+              = f.text_field :name, autofocus: true, placeholder: "株式会社Wantedly", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :logo, "ロゴ", class: "form-label"
+            .company-form__field--right
+              = f.file_field :logo, autofocus: true, class: "form-logo"
+          .company-form__field
+            .company-form__field--left
+              = f.label :address, "住所", class: "form-label"
+            .company-form__field--right
+              = f.text_field :address, autofocus: true, placeholder: "住所を入力してください", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :email, "Email", class: "form-label"
+            .company-form__field--right
+              = f.email_field :email, autofocus: true, placeholder: "メールアドレスを入力してください", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :password, "Password", class: "form-password"
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length}文字以上)
+            .company-form__field--right
+              = f.password_field :password, autocomplete: "off", placeholder: "パスワードを入力してください", class: "form-input"
+          .company-form__field
+            .submit-action
+              = f.submit "登録する", class: "btn"
+          .signin-link
+            = render "devise/shared/links"
+    .right-side-messages
+      %h2 安心してご利用いただけます
+      %p Wantedlyでは皆様に安心してご利用いただける様、プライバシーに最大限配慮しております。
+      %p 皆様に安心してお使いいただくために、ご登録時の情報の表示範囲を以下に明示致します。
+      %h3 プロフィール情報の表示範囲
+      %p ご登録に際してお客様にご入力いただいたプロフィール情報の公開範囲は、公開設定より細かくコントロールできます。
+      %p Wantedlyでは皆様に安心してご利用いただけるよう改良を行ってまいります。何かお気づきの点、ご質問等ございましたら以下のメールアドレスまでお問い合わせください。
+      %p support@wantedly.com
+      %p 今後ともWantedlyを宜しくお願い致します。
