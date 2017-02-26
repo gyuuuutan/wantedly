@@ -1,17 +1,25 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.container
+  .intro-bar
+    %p Wantedlyを使うと運命のチームやシゴトに出会えたり、シゴト仲間のつながり管理が簡単になります
+  .header
+    %p.header-logo
+      = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), products_path
+  .registrations-body
+    .main-body
+      %h1.title ログイン
+      .company-form
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .company-form__field
+            .company-form__field--left
+              = f.label :email, class: "form-label"
+            .company-form__field--right
+              = f.email_field :email, autofocus: true, class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :password, class: "form-label"
+            .company-form__field--right
+              = f.password_field :password, autocomplete: "off", class: "form-input"
+          .company-form__field
+            .submit-action
+              = f.submit "ログイン", class: "btn login-btn"
+        = render "devise/shared/links"
