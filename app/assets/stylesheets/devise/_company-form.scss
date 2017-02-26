@@ -1,4 +1,15 @@
 .container {
+  .intro-bar {
+    background: #00A4BB;
+    text-align: center;
+    line-height: 1;
+    overflow: hidden;
+    p {
+      color: #FFF;
+      padding-right: 60px;
+      margin: 19px 0;
+    }
+  }
   @include clearfix();
   width: 100%;
   min-width: 980px;
@@ -76,6 +87,13 @@
         }
         .btn:hover {
           background: #4f8338;
+        }
+        .login-btn {
+          background: #00A4BB;
+          border: 1px solid #1e7785;
+        }
+        .login-btn:hover {
+          background: #1e7785;
         }
         .signin-link {
           margin-top: 20px;
