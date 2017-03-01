@@ -18,3 +18,5 @@
 
 test/
 helpers/
+public/uploads
+.env
