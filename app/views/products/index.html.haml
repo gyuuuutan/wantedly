@@ -47,22 +47,27 @@
             %h4 並び替え
       .projects-index-list
         .project-index-single
-          .project-image
-            %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/424668/original/91cc1fef-99eb-424c-ae2a-398a335ecc5b.png?1480500682"}
-          .project-detail
-            .project-label
-              %span 新卒採用（メルカリは通年採用）
-            %h1.project-title
-              %span 《17/18/19新卒》メルカリにはどこよりも成長できる環境があります
-            .project-bottom
-              %table{role: "presentation"}
-                %tbody
-                  %tr
-                    %td.company-thumbnail
-                      %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/35323/original/bd46320d-a4c6-4bdc-bc52-e4b2993873b5.png?1410166354"}
-                    %td.company-name
-                      %h3 株式会社メルカリ
-                      %span 東京都
+          - @products.each do |product|
+            .project-image
+              = product.image
+            .project-detail
+              .project-label
+                %span
+                  = product.job_type
+              %h1.project-title
+                %span
+                  = product.title
+              .project-bottom
+                %table{role: "presentation"}
+                  %tbody
+                    %tr
+                      %td.company-thumbnail
+                        = product.company.logo
+                      %td.company-name
+                        %h3
+                          = product.company.name
+                        %span
+                          = product.region
         .project-index-single
           .project-image
             %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/994078/original/44cd9a09-d023-4e77-b1eb-9c81f0b577a4.jpeg?1482736247"}
