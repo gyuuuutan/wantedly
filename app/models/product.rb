@@ -6,4 +6,5 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :what_products
   accepts_nested_attributes_for :why_products
   accepts_nested_attributes_for :how_products
+  mount_uploader :image, ImagesUploader
 end
