@@ -66,3 +66,6 @@ gem 'font-awesome-sass'
 gem 'font-awesome-rails'
 # 画像投稿機能
 gem 'carrierwave'
+# S3に画像を保存
+gem 'dotenv-rails'
+gem 'fog'
