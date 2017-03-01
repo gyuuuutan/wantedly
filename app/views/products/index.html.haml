@@ -49,7 +49,7 @@
         .project-index-single
           - @products.each do |product|
             .project-image
-              = image_tag product.image.to_s
+              = image_tag product.image.url
             .project-detail
               .project-label
                 %span
@@ -62,7 +62,7 @@
                   %tbody
                     %tr
                       %td.company-thumbnail
-                        = image_tag product.company.logo.to_s
+                        = image_tag product.company.logo.url
                       %td.company-name
                         %h3
                           = product.company.name
