@@ -48,43 +48,7 @@
       .projects-index-list
         .project-index-single
           - @products.each do |product|
-            .project-image
-              = image_tag product.image
-            .project-detail
-              .project-label
-                %span
-                  = product.job_type
-              %h1.project-title
-                %span
-                  = product.title
-              .project-bottom
-                %table{role: "presentation"}
-                  %tbody
-                    %tr
-                      %td.company-thumbnail
-                        = image_tag product.company.logo
-                      %td.company-name
-                        %h3
-                          = product.company.name
-                        %span
-                          = product.region
-        .project-index-single
-          .project-image
-            %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/994078/original/44cd9a09-d023-4e77-b1eb-9c81f0b577a4.jpeg?1482736247"}
-          .project-detail
-            .project-label
-              %span Webエンジニア
-            %h1.project-title
-              %span 男女差が最も少ないと言われるエンジニア職、今なら未経験でも教育します！
-            .project-bottom
-              %table{role: "presentation"}
-                %tbody
-                  %tr
-                    %td.company-thumbnail
-                      %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/543744/original/698edbe5-db67-4c0e-8fa0-447b6b87153c.jpeg?1472709375"}
-                    %td.company-name
-                      %h3 株式会社イデアルアーキテクツ
-                      %span 東京都
+            = render partial: "product", locals: {product: product }
     .column-side
       .project-index-filter-header.result
         %h4 結果
