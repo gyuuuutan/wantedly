@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224071229) do
+ActiveRecord::Schema.define(version: 20170301021028) do
 
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                                default: "", null: false
@@ -32,12 +32,48 @@ ActiveRecord::Schema.define(version: 20170224071229) do
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "how_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",               null: false
+    t.text     "how1",       limit: 65535, null: false
+    t.text     "how2",       limit: 65535
+    t.text     "how3",       limit: 65535
+    t.string   "image1"
+    t.string   "image2"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "company_id", null: false
-    t.string   "title",      null: false
+    t.integer  "company_id",       null: false
+    t.string   "title",            null: false
     t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "job_type",         null: false
+    t.string   "application_form", null: false
+    t.string   "region",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "what_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",               null: false
+    t.text     "what1",      limit: 65535, null: false
+    t.text     "what2",      limit: 65535
+    t.text     "what3",      limit: 65535
+    t.string   "image1"
+    t.string   "image2"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "why_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",               null: false
+    t.text     "why1",       limit: 65535, null: false
+    t.text     "why2",       limit: 65535
+    t.text     "why3",       limit: 65535
+    t.string   "image1"
+    t.string   "image2"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
