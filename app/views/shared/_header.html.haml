@@ -10,7 +10,8 @@
       %li.user-menu
         %p プロフィール
       %li.user-menu
-        %p ツール
+        = link_to new_product_path do
+          %p 投稿する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "会社名を入力してください"
