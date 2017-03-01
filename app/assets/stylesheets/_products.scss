@@ -113,11 +113,24 @@
               height: 18px;
             }
             .project-title {
-              font-size: 22px;
-              font-weight: 600;
-              line-height: 1.4;
-              margin-bottom: 8px;
-              margin-top: 10px;
+              span {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 8px;
+                margin-top: 10px;
+              }
+              a {
+                text-decoration: none;
+                cursor: pointer;
+                color: #000;
+              }
+              a:hover {
+                color: $mainLightBlueColor
+              }
+              a:visited {
+                color: #000;
+              }
             }
             .project-bottom {
               margin-top: 16px;
