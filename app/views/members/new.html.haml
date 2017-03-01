@@ -1,0 +1,32 @@
+.container
+  .header
+    %p.header-logo
+      = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), products_path
+  .registrations-body
+    .main-body
+      %h1.title 社員の追加
+      .company-form
+        = form_for [@company, @member] do |f|
+          .company-form__field
+            .company-form__field--left
+              = f.label :name, "名前", class: "form-label"
+            .company-form__field--right
+              = f.text_field :name, placeholder: "山田 太郎", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :image, "顔写真", class: "form-label"
+            .company-form__field--right
+              = f.file_field :image, class: "form-logo"
+          .company-form__field
+            .company-form__field--left
+              = f.label :position, "役職", class: "form-label"
+            .company-form__field--right
+              = f.text_field :position, placeholder: "代表取締役社長", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :profile, "プロフィール", class: "form-label"
+            .company-form__field--right
+              = f.text_field :profile, autocomplete: "off", class: "form-input"
+          .company-form__field
+            .submit-action
+              = f.submit "追加する", class: "btn"
