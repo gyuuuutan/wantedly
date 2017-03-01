@@ -7,13 +7,14 @@
         = link_to products_path do
           %p 募集をみる
       %li.user-menu
-        %p フィードをみる
-      %li.user-menu
         %p プロフィール
       - if company_signed_in?
         %li.user-menu
           = link_to new_product_path do
             %p 投稿する
+        %li.user-menu
+          = link_to "/companies/#{current_company.id}/members/new", method: :get do
+            %p 社員を追加する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "会社名を入力してください"
