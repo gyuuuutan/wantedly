@@ -3,21 +3,25 @@
   .projects-show
     .projects-show--header
       .projects-show--header__job-type
-        %span.icon-job-type 新卒採用（メルカリは通年採用）
+        %span.icon-job-type
+          = @product.job_type
       .projects-show--header__title
-        %h1 《17/18/19新卒》メルカリにはどこよりも成長できる環境があります
+        %h1
+          = @product.title
       %h2.projects-show--header__company-name
         %span.company-logo
-          %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cc=FFFFFF)/assets/images/35323/original/bd46320d-a4c6-4bdc-bc52-e4b2993873b5.png?1410166354"}
-        %p.company-name 株式会社メルカリ
-      .projects-show-header__image
-        %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=978,dh=398,da=s,ds=s,cw=978,ch=398,cc=FFFFFF)/assets/images/424668/original/91cc1fef-99eb-424c-ae2a-398a335ecc5b.png?1480500682"}
+          = image_tag @product.company.logo
+        %p.company-name
+          = @product.company.name
+      .projects-show--header__image
+        = image_tag @product.image
     .projects-show--body
       .projects-show--body--main
         .projects-show--body--main__members
           .section-title
-            %h3 株式会社メルカリのメンバー
-            %span.members-btn 全員みる(9)
+            %h3
+              = @product.company.name + 'のメンバー'
+            %span.members-btn 全員みる
           %ul.members
             %li
               .member-photo
@@ -46,10 +50,15 @@
             .section-body
               %ul.section-images
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222632/original/26de4b79-d834-4fc3-8f08-0d0ce8a1b870.png?1452299754"}
+                  = image_tag @product.what_products[0].image1
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222635/original/466aa442-3887-486d-b889-c35b4cdcd87d.jpeg?1452299754"}
-              %p メルカリは、2013年7月のアプリリリース以降順調に成長し、現在では日米通算6,000万ダウンロードを突破した日本最大のフリマアプリ「メルカリ」を運営しています。
+                  = image_tag @product.what_products[0].image2
+              %p
+                = @product.what_products[0].what1
+              %p
+                = @product.what_products[0].what2
+              %p
+                = @product.what_products[0].what3
         .descriptions
           %section.projects-show-main-section
             %header
@@ -57,10 +66,15 @@
             .section-body
               %ul.section-images
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222633/original/48eaf3c3-4318-48c7-b939-bc6e6ea501cf.jpeg?1487040524"}
+                  = image_tag @product.why_products[0].image1
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222636/original/45531b4c-d27d-453e-8136-c38d30c3ec35.png?1487040733"}
-              %p 世の中では多くのモノ・サービスが生産・販売されていますが、誰かには価値があるのに捨ててしまうなど地球資源の無駄になっていることが多いと私たちは考えています。「捨てる」を無くすために、個人間で簡単かつ安全にモノを売買できるフリマアプリ「メルカリ」を日本とアメリカで展開しています。
+                  = image_tag @product.why_products[0].image2
+              %p
+                = @product.why_products[0].why1
+              %p
+                = @product.why_products[0].why2
+              %p
+                = @product.why_products[0].why3
         .descriptions
           %section.projects-show-main-section
             %header
@@ -68,19 +82,15 @@
             .section-body
               %ul.section-images
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222634/original/ef4b1088-0d79-453b-a417-a01479b81cbc.jpeg?1487040382"}
+                  = image_tag @product.how_products[0].image1
                 %li
-                  %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=470,da=l,ds=s,cc=FFFFFF)/assets/images/222637/original/63be2c3b-d89b-4cc7-8dd7-f58b5d37dffe.png?1487040734"}
-              %p （ミッション)
-              %br ”新たな価値を生みだす世界的なマーケットプレイスを創る”
-              %br Create value in a global marketplace where anyone can buy & sell
-        .descriptions
-          %section.projects-show-main-section
-            %header
-              %h3 こんなことやります
-            .section-body
-              %p あなたの今までに出したアウトプットで評価する、『GitHub採用』
-              %br メルカリ内でインターンをやったアウトプットで評価する、『内定直結 課題型インターン選考』
+                  = image_tag @product.how_products[0].image2
+              %p
+                = @product.how_products[0].how1
+              %p
+                = @product.how_products[0].how2
+              %p
+                = @product.how_products[0].how3
       .projects-show--body--side
         .projects-show--body--side__action-btn
           .entry-btn
@@ -94,7 +104,8 @@
             %span あとで見る
         .projects-show--body--side__map
           %h4 地図
-          %p.address 東京都港区六本木6-10-1 六本木ヒルズ森タワー18F
+          %p.address
+            = @product.company.address
           .map-container
             %iframe{src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.681310220977!2d139.72693971541952!3d35.66022268019926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb64822016fa5e709!2z5qCq5byP5Lya56S-44Oh44Or44Kr44Oq!5e0!3m2!1sja!2sjp!4v1487764562296"}
   = render partial: "shared/footer"

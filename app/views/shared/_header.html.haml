@@ -4,14 +4,16 @@
   .global-menu
     %ul.user-menus
       %li.user-menu
-        %p 募集をみる
+        = link_to products_path do
+          %p 募集をみる
       %li.user-menu
         %p フィードをみる
       %li.user-menu
         %p プロフィール
-      %li.user-menu
-        = link_to new_product_path do
-          %p 投稿する
+      - if company_signed_in?
+        %li.user-menu
+          = link_to new_product_path do
+            %p 投稿する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "会社名を入力してください"
