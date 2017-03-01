@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @members = Member.where(company_id: @product.company.id)
   end
 
   def new
