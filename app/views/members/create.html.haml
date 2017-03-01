@@ -1,0 +1,13 @@
+.container
+  .header
+    %p.header-logo
+      = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), products_path
+  .body
+    .success
+      %h3 社員の追加が完了しました
+      .link
+        = link_to "/companies/#{current_company.id}/members/new", method: :get do
+          %p さらに社員を追加する
+      .link
+        = link_to products_path do
+          %p トップページに戻る
