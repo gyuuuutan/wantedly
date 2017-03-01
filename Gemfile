@@ -64,3 +64,5 @@ gem 'erb2haml'
 # font-awesomeの導入
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
+# 画像投稿機能
+gem 'carrierwave'
