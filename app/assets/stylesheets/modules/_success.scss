@@ -1,0 +1,23 @@
+.body {
+  .success {
+    width: 500px;
+    margin: 0 auto;
+    h3 {
+      font-size: 20px;
+      line-height: 50px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .link {
+      font-size: 16px;
+      text-align: center;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        color: $mainLightBlueColor
+      }
+    }
+  }
+}
