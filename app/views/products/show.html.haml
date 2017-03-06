@@ -22,9 +22,11 @@
             %h3
               = @product.company.name + 'のメンバー'
             %span.members-btn 全員みる
-            %ul.members
+          .members
+            %ul
               - @members.each do |member|
                 = render partial: "members/member", locals: {member: member }
+        .projects-member-profile
         .descriptions
           %section.projects-show-main-section
             %header
