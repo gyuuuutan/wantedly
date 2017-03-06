@@ -67,6 +67,7 @@
         padding: 40px 40px 80px 0;
         border-right: 1px solid #EBEDEF;
         &__members {
+          height: 300px;
           .section-title {
             h3 {
               font-size: 18px;
@@ -87,33 +88,41 @@
               color: #ffffff;
               cursor: pointer;
             }
-            .members {
-              padding-top: 24px;
-              li {
-                float: left;
-                width: 140px;
-                padding: 10px;
-                cursor: pointer;
-                .member-photo {
-                  margin-bottom: 12px;
-                  img {
-                    margin-top: 40px;
-                    width: 120px;
-                    height: 120px;
-                  }
+          }
+          .members {
+            padding-top: 24px;
+            li {
+              float: left;
+              width: 140px;
+              padding: 10px;
+              cursor: pointer;
+              .member-photo {
+                margin-bottom: 12px;
+                img {
+                  padding-top: 40px;
+                  width: 120px;
+                  height: 120px;
                 }
-                h4 {
-                  font-size: 14px;
-                  font-weight: 600;
-                }
-                span {
-                  font-size: 12px;
-                  color: #9DA0A4;
-                  font-weight: 300;
-                }
+              }
+              h4 {
+                font-size: 14px;
+                font-weight: 600;
+              }
+              span {
+                font-size: 12px;
+                color: #9DA0A4;
+                font-weight: 300;
               }
             }
           }
+        }
+        .member-profile {
+          margin: 26px 0 0 20px;
+          background: #f9f9f9;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          width: 600px;
+          padding: 20px;
         }
         .descriptions {
           margin: 0;
