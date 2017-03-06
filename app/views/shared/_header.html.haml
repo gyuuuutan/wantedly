@@ -21,7 +21,7 @@
         %button.search-form__btn
           %i.fa.fa-search
     .user-profile-photo
-      %img{src: "https://graph.facebook.com/660936064094685/picture?type=square"}
+      = image_tag current_company.logo
     %ul.notifications
       %li.notification
         = link_to edit_company_registration_path do
